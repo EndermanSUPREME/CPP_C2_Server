@@ -1,5 +1,4 @@
 # Basic_C2_Server
-
 ## Description
 A basic unix based command and control (C2) server, the server can handle multiple shell sessions concurrently, this client also comes equip with multiple command interfaces for handling sessions and creating basic reverse shell payloads. This project is not focused on creating shell code that can bypass modern AV, for basic capture the flag competitions where AV is minimal or not active this project will work fine.
 
@@ -29,7 +28,7 @@ This C2 Server can:
 * Pop-up Notification when a Shell is possibly Captured
 
 ## Demo
-https://github.com/EndermanSUPREME/Basic_C2_Server/showcase.mp4
+https://github.com/EndermanSUPREME/Basic_C2_Server/assets/67215373/9bea9496-7404-4ab7-8042-d9d58a585225
 
 ## Developer Notes
 There are still some small bugs that are being investigated
