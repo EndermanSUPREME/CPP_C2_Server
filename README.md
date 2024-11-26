@@ -1,7 +1,25 @@
 # Basic_C2_Server
-This is a small side project using only C++ to build a basic functional Command &amp; Control Server
 
-## Functions
+## Description
+A basic unix based command and control (C2) server, the server can handle multiple shell sessions concurrently, this client also comes equip with multiple command interfaces for handling sessions and creating basic reverse shell payloads. This project is not focused on creating shell code that can bypass modern AV, for basic capture the flag competitions where AV is minimal or not active this project will work fine.
+
+## :desktop_computer: Building the Server
+This project uses C++17, have the g++ compiler installed before cloning.
+```bash
+sudo apt update && sudo apt install g++
+```
+```bash
+git clone https://github.com/EndermanSUPREME/CPP_C2_Server.git
+chmod +x ./build.sh && ./build.sh
+```
+
+## :computer: Running the Server
+The build.sh folder produces messages to stdout on how to run as well.
+```bash
+./server.out
+```
+
+## :wrench: Server Functionality
 This C2 Server can:
 * Support Multiple Shell Sessions
 * Listen on ALL interfaces
@@ -10,32 +28,10 @@ This C2 Server can:
 * Run Unix system commands locally when outside shell sessions
 * Pop-up Notification when a Shell is possibly Captured
 
-## In Developement
-* obfuscation
-
-## Still Under Development
-There are still some small bugs that are being investigated
-through testing the program operates as promised, but patches
-are on the way!
-
 ## Demo
 https://github.com/EndermanSUPREME/Basic_C2_Server/showcase.mp4
 
-## Usage
-To compile this into an executable I used:
-`clang++ -g -Werror -W -Wunused -Wuninitialized -Wshadow -std=c++17 C2.cpp -o server.out`
-after compiling to run it is a simple `./server.out` and you're ready to go!
-
-## Patches
-* Adjusted nc shell output
-* Fixed logic errors with shell script file output / executable creation
-* Fixed -ip flag logic
-* Adjusted flag logic, found bugs spawning in false errors
-* -O requires -ip when creating files
-* Removed the debug statement showing the command parsing results
-* Added output prompt when file creation is successful
-* Added Windows based Shell Scripts [includes file creation]
-* As a cheat method I used unix python3 -c command to make converting UTF-8 -> UTF-16LE -> Base64 more managable
-* Adjusted devices/sessions screen to show details on shell user and OS the session links to
-* Added another flag to shutdown c2 server (exit)
-* Upload/Download options have been created
+## Developer Notes
+There are still some small bugs that are being investigated
+through testing the program operates as promised, but patches
+are on the way!
